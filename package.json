@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "cz": "git-cz",
     "test": "echo \"Warning: no test specified\" && exit 0",
+    "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
   "keywords": [],
@@ -15,6 +17,12 @@
     "url": "https://github.com/Torpus/pantry.git"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^3.1.0",
     "semantic-release": "^17.0.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
