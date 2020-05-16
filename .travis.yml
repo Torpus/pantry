@@ -9,7 +9,7 @@ jobs:
         - npm run lint
     - stage: audit
       script:
-        - npm audit
+        - npm run audit
     - stage: test
       script:
         - npm test

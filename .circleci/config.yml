@@ -23,7 +23,7 @@ jobs:
           command: npm run lint
       - run:
           name: audit
-          command: npm audit
+          command: npm run audit
       - run:
           name: test
           command: npm test
