@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cz": "git-cz",
     "test": "echo \"Warning: no test specified\" && exit 0",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
@@ -18,11 +17,18 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^7.0.0",
+    "husky": "^4.2.5",
     "semantic-release": "^17.0.4"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   }
 }
