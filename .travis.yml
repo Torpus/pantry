@@ -7,6 +7,9 @@ jobs:
     - stage: lint
       script:
         - npm run lint
+    - stage: audit
+      script:
+        - npm audit
     - stage: test
       script:
         - npm test
